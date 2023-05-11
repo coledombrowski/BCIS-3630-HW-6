@@ -1,0 +1,126 @@
+# BCIS-3630-HW-6
+Object Oriented Programming (3630) Homework Files
+ JAVA SIX (Arrays and ArrayList) – 25 Points from Gaddis Chapter 7 A. S23.2 – Restaurants (10 Points)
+Write a Java program that creates an ArrayList (pg 472) of 8 restaurants: Avesta, Chili’s, Eagle Landing, Firehouse Subs, Jason’s Deli, Mean Greens, Outback Steakhouse, and Texas Roadhouse. Set up a loop to print the list of restaurants. Add (pg 477) Cheddars Kitchen alphabetically in the ArrayList (use the correct subscript to insert, don’t try to figure out where it fits alphabetically). Set (replace) (pg 478) Firehouse Subs and Mean Greens to (with) your two favorite restaurants (they will not necessarily be alphabetical), then print the list again. You do not need to ask the users for the restaurants.
+Example Print 1:
+List of Restaurants
+Avesta
+Chili’s
+Eagle Landing
+Firehouse Subs
+Jason’s Deli
+Mean Greens
+Outback Steakhouse
+Texas Roadhouse
+Example Print 2:
+Updated Restaurant List
+Avesta
+Cheddars Kitchen
+Chili’s
+Eagle Landing
+Dickey’s Barbecue
+Jason’s Deli
+El Matador
+Outback Steakhouse
+Texas Roadhouse
+Hints/Tips:
+● The for loop works well for printing
+● Don’t forget the ArrayList import
+
+ ● Use the size of the ArrayList to know when to stop
+● This is only one program, no class, and you don't need to do methods
+● Don’t forget to start from 0 on the first element of the array
+● The program should print the initial ArrayList, print a blank line or two, then
+print the 2nd ArrayList
+● It took me 19 minutes to complete
+Rubric:
+● Doesn't use the ArrayList -100%
+● Doesn't populate all 8 restaurants -5% per restaurant missing
+● Doesn't insert Cheddars Kitchen after Avesta -10%
+● Doesn't replace Mean Greens and Firehouse Subs -10% each
+● Doesn't print first list -20%
+● Doesn't print updated list of 9 restaurants -20%
+● Code is not formatted correctly (indents, curly braces are aligned) -5%
+B. S23.2 – Phone Class Array (15 Points)
+Write a Java program that keeps up with phone information using an array of phone class (click here for Phone.java
+Download click here for Phone.java
+) objects, then reports them. The class attributes are customer name, customer email, and part number. Set up an array (pg 444) that stores four customer objects. The phone class includes getting the description and price based on the part number. Set up a loop to print the fields in each instance, including the description and price, accumulating the price to print a total after the loop finishes. The phone class is provided and has the following UML definition:
+    Phone
+ - custName : String
+ - custEmail : String
+ - partNum : String
+ + Phone()
+ + Phone(name : String, email : String, part : String)
+ + setCustName(name : String) : void
+ + setCustEmail(email : String) : void
+ 
+    + setPartNum(part : String) : void
+ + getCustName() : String
+ + getCustEmail() : String
+ + getPartNum() : String
+ + getPhoneDesc() : String
+ + getPhonePrice() : double
+ Here are the valid part numbers:
+     P a r t N u m b e r
+Descri ption
+Price
+1 2 3 1
+iPhone 14
+1 2 4 1
+Apple Watch
+2 1 3 1
+Galaxy S22
+    
+  2 1 4 1
+Galaxy Z Fold4
+1,799. 99
+2 1 5 1
+Galaxy Watch 5
+2 7 9
+. 9 9
+Example (print the column headings, all four lines, and the totals when you run the program):
+Customer
+Price
+Juan Olivarez
+$1,799.99
+Suphanee King
+499.99
+Soheyla Eydani
+749.99
+Robb Dean
+429.99
+$3,479.96
+Hints/Tips:
+Email               Phone          Part#
+J.Olivarez@IBM.com  Galaxy Z Fold4  2141
+S.King@Chase.com
+S.Eydani@Citi.com
+R.Dean@BofA.com
+iPhone 14
+Galaxy S22
+Apple Watch
+1231    $
+2131    $
+1241    $
+Total
+● Since you must print a total price for all phones, you’ll need an accumulator field.
+● The for loop would be a good choice for this program since there are four customers.
+● Since we’re printing in a loop, it would look best to use System.out.printf instead of JOptionPane.
+● Don’t forget to download and compile the Phone class program.
+● When you instantiate your four customers, you can hardcode (use literals
+rather than ask the user) the arguments to send to the class. This will simplify
+testing.
+● You are not required to test all of the methods in the phone class. The
+programmer (me) should have done that for you.
+
+ ● Here is my printf for the column headings "%-20s%-30s\t%-14s\t%-5s\t%-8s\n". Then I put the column headings in literals separated by commas (i.e. ,”Customer”,”Email”...). The detail lines were very similar except that the last field is the price which needs to be $,8.2f unless you want a larger field.
+● To see how to create the array as an array of object, look on pg 446 line 16 where it creates the BankAccount array. To instantiate each phone object in the array, look on pg 447 at the last line (#55) where it has “= new BankAccount(balance). Use our class, putting all the fields used in the full constructor for phone (i.e. Phone(“Juan Olivarez”,”J.Olivarez@IBM.com”,”2141”), instead of BankAccount(balance).
+● In the array to print, you’ll have to get each field individually (but it’s a loop, so you only have to type everything once). After printf but in the loop, get the price and add it to your accumulator. After the loop, when I printed the total of all phones, I used about 20ish tabs (\t) to line it up with the price column.
+● I tested with only 1 customer to ensure it worked and for aligning before adding the other three.
+● It took me a little less than 27 minutes to complete. I had 27 lines of code before putting in comments.
+Rubric:
+● Doesn't use arrays to store the customer phone info -100%
+● Doesn't total the price of the phones purchased -10%
+● Doesn't print one of the five fields -10%
+● Doesn't use the phone class -30%
+● Code is not formatted correctly (indents, curly braces are aligned) -5%
